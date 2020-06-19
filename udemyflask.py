@@ -8,6 +8,9 @@ app=Flask(__name__)
 @app.route('/',methods=['GET','POST'])
 def welcome():
 	name=''
+	designation=''
+	highesteducation=''
+	zodiacsign=''
 	if request.method=="POST" and "Name" in request.form:
 		name=request.form.get("Name")
 		designation=request.form.get("Designation")
