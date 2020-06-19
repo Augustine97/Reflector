@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='udemyflask.css') }}">
+	<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+	<title>demo</title>
+</head>
+<body>
+	<!--<h1>cherish!!!!</h1>
+	<p>fucking udemy course</p>-->
+	<div>
+		<h1>Reflector</h1>
+		<form class="pure-form" method="POST" action="/">
+			Name:
+			<input type="text" name="Name"><br><br>
+			Designation:
+			<input type="text" name="Designation"><br><br>
+			Highest Education:
+			<input type="text" name="HighestEducation"><br><br>
+			Zodiac Sign:
+			<input type="text" name="ZodiacSign"><br><br>
+			<button type="submit" class="pure-button pure-button primary" value="submit">Submit</button>
+		</form>
+	</div>
+	<br>
+	<div>
+		{% if Name %} <!--if the name is entered by the user and submit button is clicked then the message "Welome with the name entered is dispayed" -->
+		<p> Welcome {{Name}}!!!!. </p>
+		<p> Your designation is {{Designation}}.</p>
+		<p> Your highest educatiion is {{HighestEducation}}.</p>
+		<p> Your zodiac sign is {{ZodiacSign}}.</p>
+
+		{% endif %}
+
+	</div>
+
+
+</body>
+</html>
